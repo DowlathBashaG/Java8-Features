@@ -1,4 +1,4 @@
-package io.dowlath.imperatvive_declarative_uniqueelements;
+package io.dowlath.imperative_declarative_uniqueelements;
 
 /**
  * @Author Dowlath
