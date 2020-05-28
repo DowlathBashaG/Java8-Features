@@ -1,6 +1,7 @@
 package io.dowlath.data;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @Author Dowlath
@@ -12,9 +13,20 @@ public class Student {
     private double gpa;
     private String gender;
     private List<String> activities;
+    private Optional<Bike> bike = Optional.empty();
 
+    private int  noteBooks;
     public Student(){
 
+    }
+
+    public Student(String name, int gradeLevel, double gpa, String gender, List<String> activities, int noteBooks) {
+        this.name = name;
+        this.gradeLevel = gradeLevel;
+        this.gpa = gpa;
+        this.gender = gender;
+        this.activities = activities;
+        this.noteBooks = noteBooks;
     }
 
     public Student(String s) {
@@ -71,6 +83,23 @@ public class Student {
     public void printListOfActivities(){
         System.out.println(activities);
     }
+
+    public int getNoteBooks() {
+        return noteBooks;
+    }
+
+    public void setNoteBooks(int noteBooks) {
+        this.noteBooks = noteBooks;
+    }
+
+    public Optional<Bike> getBike() {
+        return bike;
+    }
+
+    public void setBike(Optional<Bike> bike) {
+        this.bike = bike;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -79,6 +108,8 @@ public class Student {
                 ", gpa=" + gpa +
                 ", gender='" + gender + '\'' +
                 ", activities=" + activities +
+                ", bike=" + bike +
+                ", noteBooks=" + noteBooks +
                 '}';
     }
 }
